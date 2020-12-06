@@ -7,7 +7,7 @@ import com.rezdy.lunch.dto.RecipeDto;
 
 /**
  * 
- * Code to Interface, not implements.
+ * Code to Interface, not implementation.
  * 
  * @author bruce
  *

@@ -41,7 +41,6 @@ public class LunchServiceImpl implements LunchService {
 		final List<RecipeDto> afterBestList = new ArrayList<>();
 
 		this.recipesSorted = recipes.stream().filter(recipe -> {
-			System.out.println("date" + date);
 			boolean hasAfterBeforeIngredient = false;
 			hasAfterBeforeIngredient = recipe.getIngredients().stream()
 					.anyMatch(ingredient -> ingredient.getBestBefore().isBefore(date));
@@ -50,8 +49,9 @@ public class LunchServiceImpl implements LunchService {
 				afterBestList.add(recipe);
 			return !hasAfterBeforeIngredient;
 		}).collect(Collectors.toList());
-
-		this.recipesSorted.addAll(afterBestList);
+		if (!afterBestList.isEmpty()) {
+			this.recipesSorted.addAll(afterBestList);
+		}
 
 	}
 
