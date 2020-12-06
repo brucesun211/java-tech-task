@@ -1,4 +1,4 @@
-package com.rezdy.lunch.service;
+package com.rezdy.lunch.dao;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -6,15 +6,12 @@ import java.util.List;
 import com.rezdy.lunch.dto.RecipeDto;
 
 /**
- * 
- * Code to Interface, not implements.
+ * RecipeDao is interface, we can have different RecipeDao Implements(JPA, JDBC, Mybatis)
  * 
  * @author bruce
  *
  */
-public interface LunchService {
-
-	public List<RecipeDto> getNonExpiredRecipesOnDate(String date);
+public interface RecipeDao {
 
 	public List<RecipeDto> loadRecipes(LocalDate date);
 

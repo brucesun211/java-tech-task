@@ -34,4 +34,12 @@ The service provides an endpoint that will determine, from a set of recipes, wha
     ```
     
 3. Run Springboot LunchApplication
-Bruce Sun
+
+Bruce Sun Improvements
+
+1: Extracted Dao and Service Interfaces to improve MVC layers.
+2: ExceptionHandler improvement(DateFormatException and General Exception)
+3: Fix Bugs for DAO
+4: Added Sort function for bestBefore.
+5: Applied DTO to decouple title coupling of service layer and dao layer.
+6: Unit tests
